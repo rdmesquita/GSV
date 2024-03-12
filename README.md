@@ -29,7 +29,7 @@ To use the Gene Selector for Validation (GSV), it is not necessary to install Py
 
   1. Access the main page of the GSV repository on GitHub: https://github.com/rdmesquita/GSV
 
-  2. Click on the green "Code" button and select the "Download ZIP" option. This will download the compressed program file.
+  2. Download the latest available release.
 
   3. Extract the file to a folder of your choice. Make sure the "image" folder is present in the same directory as the executable file.
 
