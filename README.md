@@ -27,7 +27,7 @@ The GSV groups transcriptome quantification tables, relating the TPM value of ea
 
 To use the Gene Selector for Validation (GSV), it is not necessary to install Python or other dependencies on your machine, as the program has already been compiled into an executable file (.exe). Simply download the file from the GitHub repository and run it on your Windows 10 computer.
 
-  1. Access the main page of the GSV repository on GitHub: https://github.com/usuario/nome-do-repositorio
+  1. Access the main page of the GSV repository on GitHub: https://github.com/rdmesquita/GSV
 
   2. Click on the green "Code" button and select the "Download ZIP" option. This will download the compressed program file.
 
