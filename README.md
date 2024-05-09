@@ -8,7 +8,7 @@
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/marciow0205/TCC">
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/marciow0205/TCC">
 <h3 align="center"><i>A tool capable of suggesting candidate reference and validation genes for your RT-qPCR from RNA-Seq data.</i></h3>
-<h7><i style="font-size: 10px;">To process RT-qPCR and microarray results, we suggest using the OLIgonucleotide Variable Expression Ranker (OLIVER) program. Available <a href="http://pubmed.ncbi.nlm.nih.gov/25763136/">here</a></i></h7>
+<p align="center"><i style="font-size: 10px;">To process RT-qPCR and microarray results, we suggest using the OLIgonucleotide Variable Expression Ranker (OLIVER) program. Available <a href="http://pubmed.ncbi.nlm.nih.gov/25763136/">here</a></i></p>
 
 
 ## Index
