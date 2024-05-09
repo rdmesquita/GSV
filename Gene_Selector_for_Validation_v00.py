@@ -589,8 +589,15 @@ def to_analyze():
         files = pd.read_csv(directory, sep=separator, engine='python')
         dFrame = files
         
+        # Substituindo ',' por '.' em todas as colunas, exceto a primeira ('name')
         for col in dFrame.columns[1:]:
-            dFrame[col] = dFrame[col].str.replace(',','.').astype(float)
+            dFrame[col] = dFrame[col].apply(lambda x: str(x).replace(',', '.'))
+
+        # Convertendo as colunas para float
+        for col in dFrame.columns[1:]:
+            dFrame[col] = dFrame[col].astype(float)
+
+        # Renomeando a coluna 'name' para 'Genes'
         dFrame = dFrame.rename(columns={genes:'Genes'})
         
 
