@@ -581,6 +581,7 @@ def to_analyze():
         files = pd.read_excel(directory)
         dFrame = files
         dFrame = dFrame.rename(columns={genes:'Genes'})
+        print(dFrame)
         
     elif type2==1:
          # Processing text files (type2=1)
@@ -588,6 +589,7 @@ def to_analyze():
         directory = listbox.get(0)
         files = pd.read_csv(directory, sep=separator, engine='python')
         dFrame = files
+        print(dFrame)
         
         # Substituindo ',' por '.' em todas as colunas, exceto a primeira ('name')
         for col in dFrame.columns[1:]:
@@ -598,7 +600,10 @@ def to_analyze():
             dFrame[col] = dFrame[col].astype(float)
 
         # Renomeando a coluna 'name' para 'Genes'
-        dFrame = dFrame.rename(columns={genes:'Genes'})
+        dFrame = dFrame.rename(columns={'name': 'Genes'})
+
+        # Imprimindo o DataFrame
+        print(dFrame)
         
 
     # Progress bar update
@@ -614,6 +619,7 @@ def to_analyze():
         #print(dFrame[filtro])
         # Keep rows where the TPM value is greater than 0
         dFrame = dFrame[filtro]
+    print("\n\n-----------FILTER I----------------\n\n")
     print(dFrame)
     my_progress['value'] = 20
 
@@ -628,14 +634,15 @@ def to_analyze():
 
     # Creating a table with the standard deviation of log2(TPM)
     results = pd.DataFrame()
-    results['VB ID'] = criterio['Genes']
+    results['GENE ID'] = criterio['Genes']
     results["SD"] = criterio.std(axis=1, numeric_only=True)
     print(results)
 
     # Filtering (standard deviation [log2(TPM)] < 1)
-    filter = results["SD"] < filtersI[1]
+    filter = results["SD"] <= filtersI[1]
     results = results[filter]
     criterio = criterio[filter]
+    print("\n\n-----------FILTER II----------------\n\n")
     print(results)
     print(criterio)
 
@@ -647,12 +654,14 @@ def to_analyze():
     for col in criterio.columns[1:]:
         filter = abs(criterio[col].sub(results["TPM AVRG"])) <= filtersI[2]
         criterio, results = criterio[filter], results[filter]
+    print("\n\n-----------FILTER III----------------\n\n")
     print(criterio)
     print(results)
 
-    # Filtering Mean Log2(TPM) > 5
-    filter = results["TPM AVRG"] > filtersI[3]
+    # Filtering Mean Log2(TPM) >= 5
+    filter = results["TPM AVRG"] >= filtersI[3]
     results = results[filter]
+    print("\n\n-----------FILTER IV----------------\n\n")
     print(results)
 
     # Adding a column with the value of standard deviation/Mean
@@ -660,11 +669,11 @@ def to_analyze():
     print(results)
 
     # Filtering only values where Standard Deviation/Mean is less than 0.2
-    filter = results["CV"] < filtersI[4]
+    filter = results["CV"] <= filtersI[4]
     results = results[filter]
     results = results.sort_values(by=['CV'])
     results.insert(0, 'GSV ID', range(1, results.shape[0] + 1))
-    print()
+
     
     result_title = Label(frame_results, text='Candidate: Reference genes',
                          font = "Arial 16 bold")
@@ -740,7 +749,7 @@ def to_analyze():
 
         # Creating a table with the standard deviation of log2(TPM)
         results2 = pd.DataFrame()
-        results2['VB ID'] = criterio['Genes']
+        results2['GENE ID'] = criterio['Genes']
         results2["SD"] = criterio.std(axis=1, numeric_only=True)
         print(results2)
 
@@ -864,7 +873,7 @@ posy = screen_height/2 - height/2
 # define geometry
 root.geometry("%dx%d+%d+%d" % (width, height, posx, posy))
 root.resizable(False, False)
-root.iconbitmap('image/minilogo.ico') # Set window icon
+root.iconbitmap('image\minilogo.ico') # Set window icon
 
 # Menubar creation
 menubar = Menu(root)
