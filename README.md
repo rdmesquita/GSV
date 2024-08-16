@@ -1,7 +1,7 @@
 <p align = "center">
 <img width="250" src="https://github.com/marciow0205/GeneSelectorForValidation/blob/087abbb4b8dd3f2f4a9e1a4f82f21fab2c4e133e/image/logo2.png" alt="GSV-logo"/></p>
 <h1 align="center">Gene Selector for Validation</h1>
-Gene Selector for Validation [GSV] - de Brito, M.W.D. - RNA-seq validation: software for selection of reference and variable candidate genes for RT-qPCR. BMC Genomics 25, 697 (2024). https://doi.org/10.1186/s12864-024-10511-y
+
 <!-- Badges -->
 
 [![Python Version](https://img.shields.io/badge/Python-3.6%2B-blue)](https://www.python.org/downloads/)
@@ -9,6 +9,7 @@ Gene Selector for Validation [GSV] - de Brito, M.W.D. - RNA-seq validation: soft
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/marciow0205/TCC">
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/marciow0205/TCC">
 <h3 align="center"><i>A tool capable of suggesting candidate reference and validation genes for your RT-qPCR from RNA-Seq data.</i></h3>
+<p align="center"><i style="font-size: 12px;">Gene Selector for Validation [GSV] - de Brito, M.W.D. - RNA-seq validation: software for selection of reference and variable candidate genes for RT-qPCR. BMC Genomics 25, 697 (2024). https://doi.org/10.1186/s12864-024-10511-y </p>
 <p align="center"><i style="font-size: 10px;">To process RT-qPCR and microarray results, we suggest using the OLIgonucleotide Variable Expression Ranker (OLIVER) program. Available <a href="http://pubmed.ncbi.nlm.nih.gov/25763136/">here</a></i></p>
 
 
