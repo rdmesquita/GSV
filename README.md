@@ -1,6 +1,7 @@
 <p align = "center">
 <img width="250" src="https://github.com/marciow0205/GeneSelectorForValidation/blob/087abbb4b8dd3f2f4a9e1a4f82f21fab2c4e133e/image/logo2.png" alt="GSV-logo"/></p>
 <h1 align="center">Gene Selector for Validation</h1>
+Gene Selector for Validation [GSV] - de Brito, M.W.D. - RNA-seq validation: software for selection of reference and variable candidate genes for RT-qPCR. BMC Genomics 25, 697 (2024). https://doi.org/10.1186/s12864-024-10511-y
 <!-- Badges -->
 
 [![Python Version](https://img.shields.io/badge/Python-3.6%2B-blue)](https://www.python.org/downloads/)
